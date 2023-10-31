@@ -1,0 +1,41 @@
+SET UTF-8
+
+AF 4
+AF ABCDGHKL
+AF ABCEGIKL
+AF ABCFGJKL
+AF ABHK
+
+SFX A Y 1
+SFX A â ou . is:past_particople
+
+SFX B Y 1
+SFX B â ando . is:gerund
+
+SFX C Y 1
+SFX C â o . is:present_ind_1s
+
+SFX D Y 1
+SFX D â i . is:present_ind_2s
+SFX E Y 2
+SFX E â hi [cg]â is:present_ind_2s
+SFX E iâ i [cg]iâ is:present_ind_2s
+SFX F Y 1
+SFX F â i [cg]iâ is:present_ind_2s
+
+SFX G Y 1
+SFX G â a . is:present_ind_3s
+
+SFX H Y 1
+SFX H â emmo . is:present_ind_1p
+SFX I Y 2
+SFX I â hemmo [cg]â is:present_ind_1p
+SFX I iâ emmo [cg]iâ is:present_ind_1p
+SFX J Y 1
+SFX J â emmo [cg]iâ is:present_ind_1p
+
+SFX K Y 1
+SFX K â æ . is:present_ind_2p
+
+SFX L Y 1
+SFX L â an . is:present_ind_3p
