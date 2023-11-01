@@ -1,16 +1,14 @@
 SET UTF-8
 
 AF 4
-AF ABCDGHKL
-AF ABCEGIKL
-AF ABCFGJKL
-AF ABHK
+AF ACDGHKL
+AF ACDGIKL
+AF ACDGJKL
+AF AHK
 
-SFX A Y 1
+SFX A Y 2
 SFX A â ou . is:past_particople
-
-SFX B Y 1
-SFX B â ando . is:gerund
+SFX A â ando . is:gerund
 
 SFX C Y 1
 SFX C â o . is:present_ind_1s
