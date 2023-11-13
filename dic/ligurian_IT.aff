@@ -1,14 +1,29 @@
-# Decriptions of morphologiacal rule flags
+#------------------------------------------------
+# FLAG DESCRIPTIONS
+# @: circumfix (unused)
+# *: forbidden word
 # A: verb 1st conjugation .
 # B: verb 1st conjugation [^gc]
 # C: verb 1st conjugation [gc]
 # D: verb 1st conjugation [gc]i
+# E: verb 2nd conjugation .
 # a: verb 2s "ti" elision
 # b: verb 3s euphonic particle
-# @: circumfix (unused)
-# *: forbidden word
+#------------------------------------------------
 
 SET UTF-8
+KEY qwertyuiop|asdfghjkl|zxcvbnm
+WORDCHARS '
+
+MAP 5
+MAP aàâä
+MAP eéèêë
+MAP iìîï
+MAP oóòôö
+MAP uùûü
+
+CIRCUMFIX @
+FORBIDDENWORD *
 
 SFX A Y 10
 SFX A â ou . is:past_particople
@@ -100,11 +115,37 @@ SFX D iâ iëscimo [cg]iâ is:conditional_1p
 SFX D iâ ieivan [cg]iâ is:conditional_3p
 SFX D iâ iæn [cg]iâ is:conditional_3p
 
+SFX E Y 27
+SFX E ei uo . is:past_particople
+SFX E ei endo . is:gerund
+SFX E ei o . is:present_ind_1s
+SFX E ei i/a . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX E ei e/b . is:present_ind_3s is:present_subj_1s is:
+SFX E ei emmo . is:present_ind_1p is:present_subj_1p
+SFX E ei ei . is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX E ei an . is:present_ind_3p is:present_subj_3p
+SFX E ei eiva/b . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX E ei eivi/a . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX E ei eivimo . is:imperfect_ind_1p
+SFX E ei eivan . is:imperfect_ind_3p
+SFX E ei iò . is:future_ind_1s
+SFX E ei iæ/ab . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX E ei ià/b . is:future_ind_3s
+SFX E ei iemo . is:future_ind_1p
+SFX E ei iei . is:future_ind_2p
+SFX E ei ian . is:future_ind_3p
+SFX E ei esse/b . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX E ei esci/a . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX E ei escimo . is:imperfect_subj_1p
+SFX E ei essan . is:imperfect_subj_3p
+SFX E ei ieiva/b . is:conditional_1s is:conditional_3s
+SFX E ei iësci/a . is:conditional_2s is:conditional_2p
+SFX E ei iëscimo . is:conditional_1p
+SFX E ei ieivan . is:conditional_3p
+SFX E ei iæn . is:conditional_3p
+
 PFX a Y 1
 PFX a 0 t' [aàäeéèëiìïoóòöuùü] po:clitic_pronoun
 
 PFX b Y 1
 PFX b 0 l' [aàäeéèëiìïoóòöuùü] po:euphonic_particle
-
-CIRCUMFIX @
-FORBIDDENWORD *
