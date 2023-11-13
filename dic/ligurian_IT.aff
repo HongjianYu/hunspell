@@ -13,12 +13,15 @@
 
 SET UTF-8
 KEY qwertyuiop|asdfghjkl|zxcvbnm
+TRY AÀÂÄÆBCÇDEÉÈÊËFGHIÌÎÏLMNÑOÓÒÔÖPQRSTUÙÛÜVXZJKWYaàâäæbcçdeéèêëfghiìîïlmnñoóòôöpqrstuùûüvxzjkwy
 WORDCHARS '
 
-MAP 5
-MAP aàâä
+MAP 7
+MAP aàâäæ
+MAP cç
 MAP eéèêë
 MAP iìîï
+MAP nñ
 MAP oóòôö
 MAP uùûü
 
