@@ -1,39 +1,110 @@
+# Decriptions of morphologiacal rule flags
+# A: verb 1st conjugation .
+# B: verb 1st conjugation [^gc]
+# C: verb 1st conjugation [gc]
+# D: verb 1st conjugation [gc]i
+# a: verb 2s "ti" elision
+# b: verb 3s euphonic particle
+# @: circumfix (unused)
+# *: forbidden word
+
 SET UTF-8
 
-AF 4
-AF ACDGHKL
-AF ACDGIKL
-AF ACDGJKL
-AF AHK
-
-SFX A Y 2
+SFX A Y 10
 SFX A â ou . is:past_particople
 SFX A â ando . is:gerund
+SFX A â o . is:present_ind_1s
+SFX A â a/b . is:present_ind_3s is:imperative_2s
+SFX A â æ . is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX A â an . is:present_ind_3p is:present_subj_3p
+SFX A â ava/b . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX A â avi/a . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX A â avimo . is:imperfect_ind_1p
+SFX A â avan . is:imperfect_ind_3p
 
-SFX C Y 1
-SFX C â o . is:present_ind_1s
+SFX B Y 18
+SFX B â i/a . is:present_ind_2s is:present_subj_2s
+SFX B â emmo . is:present_ind_1p is:present_subj_1p
+SFX B â iò . is:future_ind_1s
+SFX B â iæ/ab . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX B â ià/b . is:future_ind_3s
+SFX B â iemo . is:future_ind_1p
+SFX B â iei . is:future_ind_2p
+SFX B â ian . is:future_ind_3p
+SFX B â e/b . is:present_subj_1s is:present_subj_3s
+SFX B â esse/b . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX B â esci/a . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX B â escimo . is:imperfect_subj_1p
+SFX B â essan . is:imperfect_subj_3p
+SFX B â ieiva/b . is:conditional_1s is:conditional_3s
+SFX B â iësci/a . is:conditional_2s is:conditional_2p
+SFX B â iëscimo . is:conditional_1p
+SFX B â ieivan . is:conditional_3p
+SFX B â iæn . is:conditional_3p
 
-SFX D Y 1
-SFX D â i . is:present_ind_2s
-SFX E Y 2
-SFX E â hi [cg]â is:present_ind_2s
-SFX E iâ i [cg]iâ is:present_ind_2s
-SFX F Y 1
-SFX F â i [cg]iâ is:present_ind_2s
+SFX C Y 36
+SFX C â hi/a [cg]â is:present_ind_2s is:present_subj_2s
+SFX C iâ i/a [cg]iâ is:present_ind_2s is:present_subj_2s
+SFX C â hemmo [cg]â is:present_ind_1p is:present_subj_1p
+SFX C iâ emmo [cg]iâ is:present_ind_1p is:present_subj_1p
+SFX C â hiò [cg]â is:future_ind_1s
+SFX C iâ iò [cg]iâ is:future_ind_1s
+SFX C â hiæ/ab [cg]â is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX C iâ iæ/ab [cg]iâ is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX C â hià/b [cg]â is:future_ind_3s
+SFX C iâ ià/b [cg]iâ is:future_ind_3s
+SFX C â hiemo [cg]â is:future_ind_1p
+SFX C iâ iemo [cg]iâ is:future_ind_1p
+SFX C â hiei [cg]â is:future_ind_2p
+SFX C iâ iei [cg]iâ is:future_ind_2p
+SFX C â hian [cg]â. is:future_ind_3p
+SFX C iâ ian [cg]iâ. is:future_ind_3p
+SFX C â he/b [cg]â is:present_subj_1s is:present_subj_3s
+SFX C iâ e/b [cg]iâ is:present_subj_1s is:present_subj_3s
+SFX C â hesse/b [cg]â is:imperfect_subj_1s is:imperfect_subj_3s
+SFX C iâ esse/b [cg]iâ is:imperfect_subj_1s is:imperfect_subj_3s
+SFX C â hesci/a [cg]â is:imperfect_subj_2s is:imperfect_subj_2p
+SFX C iâ esci/a [cg]iâ is:imperfect_subj_2s is:imperfect_subj_2p
+SFX C â hescimo [cg]â is:imperfect_subj_1p
+SFX C iâ escimo [cg]iâ is:imperfect_subj_1p
+SFX C â hessan [cg]â is:imperfect_subj_3p
+SFX C iâ essan [cg]iâ is:imperfect_subj_3p
+SFX C â hieiva/b [cg]â is:conditional_1s is:conditional_3s
+SFX C iâ ieiva/b [cg]iâ is:conditional_1s is:conditional_3s
+SFX C â hiësci/a [cg]â is:conditional_2s is:conditional_2p
+SFX C iâ iësci/a [cg]iâ is:conditional_2s is:conditional_2p
+SFX C â hiëscimo [cg]â is:conditional_1p
+SFX C iâ iëscimo [cg]iâ is:conditional_1p
+SFX C â hieivan [cg]â is:conditional_3p
+SFX C iâ ieivan [cg]iâ is:conditional_3p
+SFX C â hiæn [cg]â is:conditional_3p
+SFX C iâ iæn [cg]iâ is:conditional_3p
 
-SFX G Y 1
-SFX G â a . is:present_ind_3s
+SFX D Y 18
+SFX D iâ ii/a [cg]iâ is:present_ind_2s is:present_subj_2s
+SFX D iâ iemmo [cg]iâ is:present_ind_1p is:present_subj_1p
+SFX D iâ iò [cg]iâ is:future_ind_1s
+SFX D iâ iæ/ab [cg]iâ is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX D iâ ià/b [cg]iâ is:future_ind_3s
+SFX D iâ iemo [cg]iâ is:future_ind_1p
+SFX D iâ iei [cg]iâ is:future_ind_2p
+SFX D iâ ian [cg]iâ. is:future_ind_3p
+SFX D iâ ie/b [cg]iâ is:present_subj_1s is:present_subj_3s
+SFX D iâ iesse/b [cg]iâ is:imperfect_subj_1s is:imperfect_subj_3s
+SFX D iâ iesci/a [cg]iâ is:imperfect_subj_2s is:imperfect_subj_2p
+SFX D iâ iescimo [cg]iâ is:imperfect_subj_1p
+SFX D iâ iessan [cg]iâ is:imperfect_subj_3p
+SFX D iâ ieiva/b [cg]iâ is:conditional_1s is:conditional_3s
+SFX D iâ iësci/a [cg]iâ is:conditional_2s is:conditional_2p
+SFX D iâ iëscimo [cg]iâ is:conditional_1p
+SFX D iâ ieivan [cg]iâ is:conditional_3p
+SFX D iâ iæn [cg]iâ is:conditional_3p
 
-SFX H Y 1
-SFX H â emmo . is:present_ind_1p
-SFX I Y 2
-SFX I â hemmo [cg]â is:present_ind_1p
-SFX I iâ emmo [cg]iâ is:present_ind_1p
-SFX J Y 1
-SFX J â emmo [cg]iâ is:present_ind_1p
+PFX a Y 1
+PFX a 0 t' [aàäeéèëiìïoóòöuùü] po:clitic_pronoun
 
-SFX K Y 1
-SFX K â æ . is:present_ind_2p
+PFX b Y 1
+PFX b 0 l' [aàäeéèëiìïoóòöuùü] po:euphonic_particle
 
-SFX L Y 1
-SFX L â an . is:present_ind_3p
+CIRCUMFIX @
+FORBIDDENWORD *
