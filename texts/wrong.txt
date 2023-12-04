@@ -1,4 +1,6 @@
 l'ammâ
+l'ammi
+t'amma
 l'pòrti
 l'pòrta
 porto
@@ -6,6 +8,10 @@ porti
 porta
 pòrtæ
 ligemmo
+lighemmi
 manghemmo
+mangemmi
 ghemmo
 gemmo
+giemmi
+giemme

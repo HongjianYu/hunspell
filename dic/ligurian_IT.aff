@@ -5,7 +5,7 @@
 # AS: verb 1st conjugation, stressed prefix, general case
 # AI: verb 1st conjugation, stressed prefix, non-silent 'i'
 # AU: verb 1st conjugation, unstressed prefix
-# B: verb 2nd conjugation, general case
+# BG: verb 2nd conjugation, general case
 # at: verb 2s "ti" elision
 # ae: verb 3s euphonic particle
 #------------------------------------------------
@@ -28,7 +28,7 @@ CIRCUMFIX @
 FORBIDDENWORD *
 
 SFX AS Y 9
-SFX AS 0 0 . is:present_ind_1s
+SFX AS o o o is:present_ind_1s
 SFX AS o i/at [^cgi]o is:present_ind_2s is:present_subj_2s
 SFX AS o hi/at [cg]o is:present_ind_2s is:present_subj_2s
 SFX AS io i/at [cg]io is:present_ind_2s is:present_subj_2s
@@ -39,14 +39,14 @@ SFX AS o he/ae [cg]o is:present_subj_1s is:present_subj_3s
 SFX AS io e/ae [cg]io is:present_subj_1s is:present_subj_3s
 
 SFX AI Y 5
-SFX AI 0 0 . is:present_ind_1s
+SFX AI o o io is:present_ind_1s
 SFX AI o i/at [cg]io is:present_ind_2s is:present_subj_2s
 SFX AI o a/ae [cg]io is:present_ind_3s is:imperative_2s
 SFX AI o an [cg]io is:present_ind_3p is:present_subj_3p
-SFX AI o e/ae [cg]iâ is:present_subj_1s is:present_subj_3s
+SFX AI o e/ae [cg]io is:present_subj_1s is:present_subj_3s
 
 SFX AU Y 51
-SFX AU 0 0 . is:present_ind_1p is:present_subj_1p
+SFX AU emmo emmo emmo is:present_ind_1p is:present_subj_1p
 SFX AU emmo â [^cgh]emmo is:infinitive
 SFX AU hemmo â [cg]hemmo is:infinitive
 SFX AU emmo iâ [cg]emmo is:infinitive
@@ -98,34 +98,34 @@ SFX AU emmo eivan iemmo is:conditional_3p
 SFX AU emmo iæn [^i]emmo is:conditional_3p
 SFX AU emmo æn iemmo is:conditional_3p
 
-SFX B Y 27
-SFX B ei uo . is:past_particople
-SFX B ei endo . is:gerund
-SFX B ei o . is:present_ind_1s
-SFX B ei i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
-SFX B ei e/ae . is:present_ind_3s is:present_subj_1s is:
-SFX B ei emmo . is:present_ind_1p is:present_subj_1p
-SFX B ei ei . is:present_ind_2p is:present_subj_2p is:imperative_2p
-SFX B ei an . is:present_ind_3p is:present_subj_3p
-SFX B ei eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
-SFX B ei eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
-SFX B ei eivimo . is:imperfect_ind_1p
-SFX B ei eivan . is:imperfect_ind_3p
-SFX B ei iò . is:future_ind_1s
-SFX B ei iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
-SFX B ei ià/ae . is:future_ind_3s
-SFX B ei iemo . is:future_ind_1p
-SFX B ei iei . is:future_ind_2p
-SFX B ei ian . is:future_ind_3p
-SFX B ei esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
-SFX B ei esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
-SFX B ei escimo . is:imperfect_subj_1p
-SFX B ei essan . is:imperfect_subj_3p
-SFX B ei ieiva/ae . is:conditional_1s is:conditional_3s
-SFX B ei iësci/at . is:conditional_2s is:conditional_2p
-SFX B ei iëscimo . is:conditional_1p
-SFX B ei ieivan . is:conditional_3p
-SFX B ei iæn . is:conditional_3p
+SFX BG Y 27
+SFX BG ei ei . is:infinitive is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX BG ei uo . is:past_particople
+SFX BG ei endo . is:gerund
+SFX BG ei o . is:present_ind_1s
+SFX BG ei i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX BG ei e/ae . is:present_ind_3s is:present_subj_1s is:
+SFX BG ei emmo . is:present_ind_1p is:present_subj_1p
+SFX BG ei an . is:present_ind_3p is:present_subj_3p
+SFX BG ei eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX BG ei eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX BG ei eivimo . is:imperfect_ind_1p
+SFX BG ei eivan . is:imperfect_ind_3p
+SFX BG ei iò . is:future_ind_1s
+SFX BG ei iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX BG ei ià/ae . is:future_ind_3s
+SFX BG ei iemo . is:future_ind_1p
+SFX BG ei iei . is:future_ind_2p
+SFX BG ei ian . is:future_ind_3p
+SFX BG ei esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX BG ei esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX BG ei escimo . is:imperfect_subj_1p
+SFX BG ei essan . is:imperfect_subj_3p
+SFX BG ei ieiva/ae . is:conditional_1s is:conditional_3s
+SFX BG ei iësci/at . is:conditional_2s is:conditional_2p
+SFX BG ei iëscimo . is:conditional_1p
+SFX BG ei ieivan . is:conditional_3p
+SFX BG ei iæn . is:conditional_3p
 
 PFX at Y 1
 PFX at 0 t' [aàäeéèëiìïoóòöuùü] po:clitic_pronoun

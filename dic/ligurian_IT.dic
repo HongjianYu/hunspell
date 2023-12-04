@@ -1,6 +1,8 @@
-13
+15
 ammemmo/AU po:verb st:ammâ
 ammo/AS po:verb st:ammâ
+intremmo/AU po:verb st:intrâ
+intro/AS po:verb st:intrâ
 giemmo/AU po:verb st:giâ
 gio/AI po:verb st:giâ
 lavo/AU po:verb st:lavâ
@@ -11,4 +13,4 @@ mangemmo/AU po:verb st:mangiâ
 mangio/AS po:verb st:mangiâ
 portemmo/AU po:verb st:portâ
 pòrto/AS po:verb st:portâ
-taxei/B po:verb
+taxei/BG po:verb st:taxei
