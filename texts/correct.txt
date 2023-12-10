@@ -67,6 +67,8 @@ estragghi
 estraieiva
 estraiæ
 estranni
+t'estræ
+l'estrà
 ingheugge
 ingheuggio
 ingheuggi
@@ -78,6 +80,8 @@ inguggiæ
 inguggiësci
 inguggiëscimo
 inguggiæn
+t'ingheuggi
+l'ingheugge
 çerne
 çerno
 çerni
