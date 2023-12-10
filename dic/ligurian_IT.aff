@@ -1,16 +1,30 @@
 #------------------------------------------------
 # FLAG DESCRIPTIONS
-# @: circumfix (unused)
+# @: circumfix
 # *: forbidden word
-# AS: verb 1st conjugation, stressed prefix, general case
+# AR: verb 1st conjugation, stressed prefix, regular case
 # AI: verb 1st conjugation, stressed prefix, non-silent 'i'
-# AU: verb 1st conjugation, unstressed prefix
-# BG: verb 2nd conjugation, general case
+# Ar: verb 1st conjugation, unstressed prefix
+# BR: verb 2nd conjugation, stressed prefix, regular case
+# Br: verb 2nd conjugation, unstressed prefix, regular case
+# BT: verb 2nd conjugation, stressed prefix, derived from Latin "trahĕre"
+# Bt: verb 2nd conjugation, unstressed prefix, derived from Latin "trahĕre"
+# BL: verb 2nd conjugation, stressed prefix, derived from Latin "lĕgĕre"
+# Bl: verb 2nd conjugation, unstressed prefix, derived from Latin "lĕgĕre"
+# CR: verb 3rd conjugation, stressed prefix, regular case
+# Cr: verb 3rd conjugation, unstressed prefix, regular case
+# DR: verb 4th conjugation, stressed prefix, regular case
+# Dr: verb 4th conjugation, unstressed prefix, regular case
 # at: verb 2s "ti" elision
 # ae: verb 3s euphonic particle
 #------------------------------------------------
 
+# TODO: continue developing the spellchecker
+#       see if there are other available tasks
+#       use a shared GitHub repo for the project
+
 SET UTF-8
+FLAG long
 KEY qwertyuiop|asdfghjkl|zxcvbnm
 TRY AÀÂÄÆBCÇDEÉÈÊËFGHIÌÎÏLMNÑOÓÒÔÖPQRSTUÙÛÜVXZJKWYaàâäæbcçdeéèêëfghiìîïlmnñoóòôöpqrstuùûüvxzjkwy
 WORDCHARS '
@@ -27,105 +41,236 @@ MAP uùûü
 CIRCUMFIX @
 FORBIDDENWORD *
 
-SFX AS Y 9
-SFX AS o o o is:present_ind_1s
-SFX AS o i/at [^cgi]o is:present_ind_2s is:present_subj_2s
-SFX AS o hi/at [cg]o is:present_ind_2s is:present_subj_2s
-SFX AS io i/at [cg]io is:present_ind_2s is:present_subj_2s
-SFX AS o a/ae . is:present_ind_3s is:imperative_2s
-SFX AS o an . is:present_ind_3p is:present_subj_3p
-SFX AS o e/ae [^cgi]o is:present_subj_1s is:present_subj_3s
-SFX AS o he/ae [cg]o is:present_subj_1s is:present_subj_3s
-SFX AS io e/ae [cg]io is:present_subj_1s is:present_subj_3s
+SFX AR Y 9
+SFX AR 0 0 . is:present_ind_1s
+SFX AR o i/at [^cgi]o is:present_ind_2s is:present_subj_2s
+SFX AR o hi/at [cg]o is:present_ind_2s is:present_subj_2s
+SFX AR io i/at [cg]io is:present_ind_2s is:present_subj_2s
+SFX AR o a/ae . is:present_ind_3s is:imperative_2s
+SFX AR o an . is:present_ind_3p is:present_subj_3p
+SFX AR o e/ae [^cgi]o is:present_subj_1s is:present_subj_3s
+SFX AR o he/ae [cg]o is:present_subj_1s is:present_subj_3s
+SFX AR io e/ae [cg]io is:present_subj_1s is:present_subj_3s
 
 SFX AI Y 5
-SFX AI o o io is:present_ind_1s
+SFX AI 0 0 . is:present_ind_1s
 SFX AI o i/at [cg]io is:present_ind_2s is:present_subj_2s
 SFX AI o a/ae [cg]io is:present_ind_3s is:imperative_2s
 SFX AI o an [cg]io is:present_ind_3p is:present_subj_3p
 SFX AI o e/ae [cg]io is:present_subj_1s is:present_subj_3s
 
-SFX AU Y 51
-SFX AU emmo emmo emmo is:present_ind_1p is:present_subj_1p
-SFX AU emmo â [^cgh]emmo is:infinitive
-SFX AU hemmo â [cg]hemmo is:infinitive
-SFX AU emmo iâ [cg]emmo is:infinitive
-SFX AU emmo ou [^cgh]emmo is:past_participle
-SFX AU hemmo ou [cg]hemmo is:past_participle
-SFX AU emmo iou [cg]emmo is:past_participle
-SFX AU emmo ando [^cgh]emmo is:gerund
-SFX AU hemmo ando [cg]hemmo is:gerund
-SFX AU emmo iando [cg]emmo is:gerund
-SFX AU emmo æ [^cgh]emmo is:present_ind_2p is:present_subj_2p is:imperative_2p
-SFX AU hemmo æ [cg]hemmo is:present_ind_2p is:present_subj_2p is:imperative_2p
-SFX AU emmo iæ [cg]emmo is:present_ind_2p is:present_subj_2p is:imperative_2p
-SFX AU emmo ava/ae [^cgh]emmo is:imperfect_ind_1s is:imperfect_ind_3s
-SFX AU hemmo ava/ae [cg]hemmo is:imperfect_ind_1s is:imperfect_ind_3s
-SFX AU emmo iava/ae [cg]emmo is:imperfect_ind_1s is:imperfect_ind_3s
-SFX AU emmo avi/at [^cgh]emmo is:imperfect_ind_2s is:imperfect_ind_2p
-SFX AU hemmo avi/at [cg]hemmo is:imperfect_ind_2s is:imperfect_ind_2p
-SFX AU emmo iavi/at [cg]emmo is:imperfect_ind_2s is:imperfect_ind_2p
-SFX AU emmo avimo [^cgh]emmo is:imperfect_ind_1p
-SFX AU hemmo avimo [cg]hemmo is:imperfect_ind_1p
-SFX AU emmo iavimo [cg]emmo is:imperfect_ind_1p
-SFX AU emmo avan [^cgh]emmo is:imperfect_ind_3p
-SFX AU hemmo avan [cg]hemmo is:imperfect_ind_3p
-SFX AU emmo iavan [cg]emmo is:imperfect_ind_3p
-SFX AU emmo iò [^i]emmo is:future_ind_1s
-SFX AU emmo ò iemmo is:future_ind_1s
-SFX AU emmo iæ/atae [^i]emmo is:future_ind_2s is:conditional_1s is:conditional_3s
-SFX AU emmo æ/atae iemmo is:future_ind_2s is:conditional_1s is:conditional_3s
-SFX AU emmo ià [^i]emmo is:future_ind_3s
-SFX AU emmo à iemmo is:future_ind_3s
-SFX AU emmo iemo [^i]emmo is:future_ind_1p
-SFX AU emmo emo iemmo is:future_ind_1p
-SFX AU emmo iei [^i]emmo is:future_ind_2p
-SFX AU emmo ei iemmo is:future_ind_2p
-SFX AU emmo ian [^i]emmo is:future_ind_3p
-SFX AU emmo an iemmo is:future_ind_3p
-SFX AU emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
-SFX AU emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
-SFX AU emmo escimo . is:imperfect_subj_1p
-SFX AU emmo essan . is:imperfect_subj_3p
-SFX AU emmo ieiva/ae [^i]emmo is:conditional_1s is:conditional_3s
-SFX AU emmo eiva/ae iemmo is:conditional_1s is:conditional_3s
-SFX AU emmo iësci/at [^i]emmo is:conditional_2s is:conditional_2p
-SFX AU emmo ësci/at iemmo is:conditional_2s is:conditional_2p
-SFX AU emmo iëscimo [^i]emmo is:conditional_1p
-SFX AU emmo ëscimo iemmo is:conditional_1p
-SFX AU emmo ieivan [^i]emmo is:conditional_3p
-SFX AU emmo eivan iemmo is:conditional_3p
-SFX AU emmo iæn [^i]emmo is:conditional_3p
-SFX AU emmo æn iemmo is:conditional_3p
+SFX Ar Y 51
+SFX Ar emmo â [^cgh]emmo is:infinitive
+SFX Ar hemmo â [cg]hemmo is:infinitive
+SFX Ar emmo iâ [cg]emmo is:infinitive
+SFX Ar emmo ou [^cgh]emmo is:past_participle
+SFX Ar hemmo ou [cg]hemmo is:past_participle
+SFX Ar emmo iou [cg]emmo is:past_participle
+SFX Ar emmo ando [^cgh]emmo is:gerund
+SFX Ar hemmo ando [cg]hemmo is:gerund
+SFX Ar emmo iando [cg]emmo is:gerund
+SFX Ar 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Ar emmo æ [^cgh]emmo is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Ar hemmo æ [cg]hemmo is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Ar emmo iæ [cg]emmo is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Ar emmo ava/ae [^cgh]emmo is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Ar hemmo ava/ae [cg]hemmo is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Ar emmo iava/ae [cg]emmo is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Ar emmo avi/at [^cgh]emmo is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Ar hemmo avi/at [cg]hemmo is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Ar emmo iavi/at [cg]emmo is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Ar emmo avimo [^cgh]emmo is:imperfect_ind_1p
+SFX Ar hemmo avimo [cg]hemmo is:imperfect_ind_1p
+SFX Ar emmo iavimo [cg]emmo is:imperfect_ind_1p
+SFX Ar emmo avan [^cgh]emmo is:imperfect_ind_3p
+SFX Ar hemmo avan [cg]hemmo is:imperfect_ind_3p
+SFX Ar emmo iavan [cg]emmo is:imperfect_ind_3p
+SFX Ar emmo iò [^i]emmo is:future_ind_1s
+SFX Ar emmo ò iemmo is:future_ind_1s
+SFX Ar emmo iæ/atae [^i]emmo is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Ar emmo æ/atae iemmo is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Ar emmo ià [^i]emmo is:future_ind_3s
+SFX Ar emmo à iemmo is:future_ind_3s
+SFX Ar emmo iemo [^i]emmo is:future_ind_1p
+SFX Ar emmo emo iemmo is:future_ind_1p
+SFX Ar emmo iei [^i]emmo is:future_ind_2p
+SFX Ar emmo ei iemmo is:future_ind_2p
+SFX Ar emmo ian [^i]emmo is:future_ind_3p
+SFX Ar emmo an iemmo is:future_ind_3p
+SFX Ar emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Ar emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Ar emmo escimo . is:imperfect_subj_1p
+SFX Ar emmo essan . is:imperfect_subj_3p
+SFX Ar emmo ieiva/ae [^i]emmo is:conditional_1s is:conditional_3s
+SFX Ar emmo eiva/ae iemmo is:conditional_1s is:conditional_3s
+SFX Ar emmo iësci/at [^i]emmo is:conditional_2s is:conditional_2p
+SFX Ar emmo ësci/at iemmo is:conditional_2s is:conditional_2p
+SFX Ar emmo iëscimo [^i]emmo is:conditional_1p
+SFX Ar emmo ëscimo iemmo is:conditional_1p
+SFX Ar emmo ieivan [^i]emmo is:conditional_3p
+SFX Ar emmo eivan iemmo is:conditional_3p
+SFX Ar emmo iæn [^i]emmo is:conditional_3p
+SFX Ar emmo æn iemmo is:conditional_3p
 
-SFX BG Y 27
-SFX BG ei ei . is:infinitive is:present_ind_2p is:present_subj_2p is:imperative_2p
-SFX BG ei uo . is:past_particople
-SFX BG ei endo . is:gerund
-SFX BG ei o . is:present_ind_1s
-SFX BG ei i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
-SFX BG ei e/ae . is:present_ind_3s is:present_subj_1s is:
-SFX BG ei emmo . is:present_ind_1p is:present_subj_1p
-SFX BG ei an . is:present_ind_3p is:present_subj_3p
-SFX BG ei eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
-SFX BG ei eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
-SFX BG ei eivimo . is:imperfect_ind_1p
-SFX BG ei eivan . is:imperfect_ind_3p
-SFX BG ei iò . is:future_ind_1s
-SFX BG ei iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
-SFX BG ei ià/ae . is:future_ind_3s
-SFX BG ei iemo . is:future_ind_1p
-SFX BG ei iei . is:future_ind_2p
-SFX BG ei ian . is:future_ind_3p
-SFX BG ei esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
-SFX BG ei esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
-SFX BG ei escimo . is:imperfect_subj_1p
-SFX BG ei essan . is:imperfect_subj_3p
-SFX BG ei ieiva/ae . is:conditional_1s is:conditional_3s
-SFX BG ei iësci/at . is:conditional_2s is:conditional_2p
-SFX BG ei iëscimo . is:conditional_1p
-SFX BG ei ieivan . is:conditional_3p
-SFX BG ei iæn . is:conditional_3p
+SFX BR Y 4
+SFX BR 0 0 . is:present_ind_1s
+SFX BR o i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX BR o e/ae . is:present_ind_3s is:present_subj_1s is:present_subj_3s
+SFX BR o an . is:present_ind_3p is:present_subj_3p
+
+SFX Br Y 23
+SFX Br emmo ei . is:infinitive is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Br emmo uo . is:past_participle
+SFX Br emmo endo . is:gerund
+SFX Br 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Br emmo eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Br emmo eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Br emmo eivimo . is:imperfect_ind_1p
+SFX Br emmo eivan . is:imperfect_ind_3p
+SFX Br emmo iò . is:future_ind_1s
+SFX Br emmo iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Br emmo ià/ae . is:future_ind_3s
+SFX Br emmo iemo . is:future_ind_1p
+SFX Br emmo iei . is:future_ind_2p
+SFX Br emmo ian . is:future_ind_3p
+SFX Br emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Br emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Br emmo escimo . is:imperfect_subj_1p
+SFX Br emmo essan . is:imperfect_subj_3p
+SFX Br emmo ieiva/ae . is:conditional_1s is:conditional_3s
+SFX Br emmo iësci/at . is:conditional_2s is:conditional_2p
+SFX Br emmo iëscimo . is:conditional_1p
+SFX Br emmo ieivan . is:conditional_3p
+SFX Br emmo iæn . is:conditional_3p
+
+SFX BT Y 8
+SFX BT 0 0 . is:present_ind_1s
+SFX BT aggo æ/at . is:present_ind_2s
+SFX BT aggo à/ae . is:present_ind_3s
+SFX BT aggo an . is:present_ind_3p
+SFX BT aggo agghe/ae . is:present_subj_1s is:present_subj_3s
+SFX BT aggo agghi/at . is:present_subj_2s
+SFX BT aggo aggan . is:present_subj_3p
+SFX BT aggo anni . is:imperative_2s
+
+SFX Bt Y 24
+SFX Bt emmo ae . is:infinitive
+SFX Bt emmo æto . is:past_participle
+SFX Bt emmo ando . is:gerund
+SFX Bt 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Bt emmo æ . is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Bt emmo ava/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Bt emmo avi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Bt emmo avimo . is:imperfect_ind_1p
+SFX Bt emmo avan . is:imperfect_ind_3p
+SFX Bt emmo aiò . is:future_ind_1s
+SFX Bt emmo aiæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Bt emmo aià/ae . is:future_ind_3s
+SFX Bt emmo aiemo . is:future_ind_1p
+SFX Bt emmo aiei . is:future_ind_2p
+SFX Bt emmo aian . is:future_ind_3p
+SFX Bt emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Bt emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Bt emmo escimo . is:imperfect_subj_1p
+SFX Bt emmo essan . is:imperfect_subj_3p
+SFX Bt emmo aieiva/ae . is:conditional_1s is:conditional_3s
+SFX Bt emmo aiësci/at . is:conditional_2s is:conditional_2p
+SFX Bt emmo aiëscimo . is:conditional_1p
+SFX Bt emmo aieivan . is:conditional_3p
+SFX Bt emmo aiæn . is:conditional_3p
+
+SFX BL Y 4
+SFX BL io e/ae . is:infinitive is:present_ind_3s is:present_subj_1s is:present_subj_3s
+SFX BL 0 0 . is:present_ind_1s
+SFX BL io i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX BL io ian . is:present_ind_3p is:present_subj_3p
+
+SFX Bl Y 23
+SFX Bl emmo eito . is:past_participle
+SFX Bl emmo endo . is:gerund
+SFX Bl 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Bl emmo ei . is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Bl emmo eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Bl emmo eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Bl emmo eivimo . is:imperfect_ind_1p
+SFX Bl emmo eivan . is:imperfect_ind_3p
+SFX Bl emmo iò . is:future_ind_1s
+SFX Bl emmo iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Bl emmo ià/ae . is:future_ind_3s
+SFX Bl emmo iemo . is:future_ind_1p
+SFX Bl emmo iei . is:future_ind_2p
+SFX Bl emmo ian . is:future_ind_3p
+SFX Bl emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Bl emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Bl emmo escimo . is:imperfect_subj_1p
+SFX Bl emmo essan . is:imperfect_subj_3p
+SFX Bl emmo ieiva/ae . is:conditional_1s is:conditional_3s
+SFX Bl emmo iësci/at . is:conditional_2s is:conditional_2p
+SFX Bl emmo iëscimo . is:conditional_1p
+SFX Bl emmo ieivan . is:conditional_3p
+SFX Bl emmo iæn . is:conditional_3p
+
+SFX CR Y 4
+SFX CR o e/ae . is:infinitive is:present_ind_3s is:present_subj_1s is:present_subj_3s
+SFX CR 0 0 . is:present_ind_1s
+SFX CR o i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX CR o an . is:present_ind_3p is:present_subj_3p
+
+SFX Cr Y 23
+SFX Cr emmo uo . is:past_participle
+SFX Cr emmo endo . is:gerund
+SFX Cr 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Cr emmo ei . is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Cr emmo eiva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Cr emmo eivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Cr emmo eivimo . is:imperfect_ind_1p
+SFX Cr emmo eivan . is:imperfect_ind_3p
+SFX Cr emmo iò . is:future_ind_1s
+SFX Cr emmo iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Cr emmo ià/ae . is:future_ind_3s
+SFX Cr emmo iemo . is:future_ind_1p
+SFX Cr emmo iei . is:future_ind_2p
+SFX Cr emmo ian . is:future_ind_3p
+SFX Cr emmo esse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Cr emmo esci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Cr emmo escimo . is:imperfect_subj_1p
+SFX Cr emmo essan . is:imperfect_subj_3p
+SFX Cr emmo ieiva/ae . is:conditional_1s is:conditional_3s
+SFX Cr emmo iësci/at . is:conditional_2s is:conditional_2p
+SFX Cr emmo iëscimo . is:conditional_1p
+SFX Cr emmo ieivan . is:conditional_3p
+SFX Cr emmo iæn . is:conditional_3p
+
+SFX DR Y 4
+SFX DR 0 0 . is:present_ind_1s
+SFX DR o i/at . is:present_ind_2s is:present_subj_2s is:imperative_2s
+SFX DR o e/ae . is:present_ind_3s is:present_subj_1s is:present_subj_3s
+SFX DR o an . is:present_ind_3p is:present_subj_3p
+
+SFX Dr Y 23
+SFX Dr immo î . is:infinitive is:present_ind_2p is:present_subj_2p is:imperative_2p
+SFX Dr immo io . is:past_participle
+SFX Dr immo indo . is:gerund
+SFX Dr 0 0 . is:present_ind_1p is:present_subj_1p
+SFX Dr immo iva/ae . is:imperfect_ind_1s is:imperfect_ind_3s
+SFX Dr immo ivi/at . is:imperfect_ind_2s is:imperfect_ind_2p
+SFX Dr immo ivimo . is:imperfect_ind_1p
+SFX Dr immo ivan . is:imperfect_ind_3p
+SFX Dr immo iò . is:future_ind_1s
+SFX Dr immo iæ/atae . is:future_ind_2s is:conditional_1s is:conditional_3s
+SFX Dr immo ià/ae . is:future_ind_3s
+SFX Dr immo iemo . is:future_ind_1p
+SFX Dr immo iei . is:future_ind_2p
+SFX Dr immo ian . is:future_ind_3p
+SFX Dr immo isse/ae . is:imperfect_subj_1s is:imperfect_subj_3s
+SFX Dr immo isci/at . is:imperfect_subj_2s is:imperfect_subj_2p
+SFX Dr immo iscimo . is:imperfect_subj_1p
+SFX Dr immo issan . is:imperfect_subj_3p
+SFX Dr immo ieiva/ae . is:conditional_1s is:conditional_3s
+SFX Dr immo iësci/at . is:conditional_2s is:conditional_2p
+SFX Dr immo iëscimo . is:conditional_1p
+SFX Dr immo ieivan . is:conditional_3p
+SFX Dr immo iæn . is:conditional_3p
 
 PFX at Y 1
 PFX at 0 t' [aàäeéèëiìïoóòöuùü] po:clitic_pronoun
